@@ -36,8 +36,8 @@ jobs:
         # Docker build
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY1:final-$GITHUB_RUN_ID .
         # Unit test
-        docker run -d -p 8080:80 --name final $ECR_REGISTRY/$ECR_REPOSITORY1:catsv-$GITHUB_RUN_ID
+        docker run -d -p 8080:80 --name final $ECR_REGISTRY/$ECR_REPOSITORY1:final-$GITHUB_RUN_ID
         docker ps
         echo "Pause for 10 seconds to let container start"
         sleep 10
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY1:catsv-$GITHUB_RUN_ID
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY1:final-$GITHUB_RUN_ID
