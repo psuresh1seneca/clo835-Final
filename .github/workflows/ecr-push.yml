@@ -31,6 +31,7 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY1: clo835-ecr  
       run: |
+        cd .
         ls -ltra
         # Docker build
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY1:final-$GITHUB_RUN_ID .
