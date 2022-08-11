@@ -33,7 +33,7 @@ jobs:
         cd ./
         ls -ltra
         # Docker build
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY1:catsv-$GITHUB_RUN_ID .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY1:final-$GITHUB_RUN_ID .
         # Unit test
         docker run -d -p 8080:80 --name final $ECR_REGISTRY/$ECR_REPOSITORY1:catsv-$GITHUB_RUN_ID
         docker ps
