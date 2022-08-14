@@ -10,6 +10,7 @@
   {% if db_connect_result %}
     <img src="{{ url_for('../../clo835', filename='config/sucess.jpg') }}">
     <h3> Successfully connected to the MySQL database.</h3>
+    <h2>Image Location {{ success-loc }}
   {% else %}
     <img src="{{ url_for('static', filename='img/failed.png') }}">
     <h3> Failed connecting to the MySQL database. </h3>
