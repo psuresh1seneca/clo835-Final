@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
+  namespace: final
   labels:
     name: mysql
 spec:
@@ -19,11 +20,12 @@ spec:
         image: mysql
         ports:
         - containerPort: 3306
+          protocol: TCP
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
-            secretKeyRef:
-              name: secret-data
+             secretKeyRef:
+              name: app-secret
               key: DB_Password
         volumeMounts:
           - name: mysql-data
