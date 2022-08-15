@@ -11,7 +11,7 @@
     <h3> Successfully connected to the MySQL database.</h3>
     <h2><src="../../clo835/config/image_url".success_url><h2>
   {% else %}
-    
+    <img src="{{ url_for('static', filename='img/failed.png') }}">
     <h3> Failed connecting to the MySQL database. </h3>
   {% endif %}
 
