@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-webapp
+  namespace: final
+data:
+  groupname: Group7
+  image_url: |
+    {  
+      "success_url": "s3://clo835-s3/success.jpg", 
+      "failed_url": "s3://clo835-s3/failed.png"
+    }
