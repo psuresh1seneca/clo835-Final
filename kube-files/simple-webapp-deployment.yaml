@@ -32,7 +32,7 @@ spec:
               mountPath: "/opt/app-secret-volumes"
               readOnly: true
             - name: configmap-vol
-              mountPath: "/opt/config-img"
+              mountPath: "/clo835/config"
           envFrom:
             - secretRef:
                 name: app-secret
@@ -44,5 +44,5 @@ spec:
           configMap:
             name: configmap-webapp
             items:
-              - key: img_url
-                path: img_url
+              - key: image_url
+                path: image_url
