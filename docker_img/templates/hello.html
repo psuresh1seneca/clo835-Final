@@ -10,9 +10,9 @@
   {% if db_connect_result %}
      <% import linecache %>
      <% success-img = linecache.getline('../../../clo835/config/image_url', 0) %>
-     <img src="{{ success-img }}">
+     <img src="{{ url_for('static', filename='img/failed.png') }}">
     <h3> Successfully connected to the MySQL database.</h3>
-    <h2>Image Location {{ success-loc }}
+    <h2>Image Location {{ success-img }}
   {% else %}
     <img src="{{ url_for('static', filename='img/failed.png') }}">
     <h3> Failed connecting to the MySQL database. </h3>
