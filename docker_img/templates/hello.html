@@ -7,8 +7,6 @@
     vertical-align:  middle;">
 
   {% if db_connect_result %}
-    {% import linecache %}
-     {% success-img = linecache.getline('~./clo835/config/image_url', 0) %}
     <img src="{{ url_for('static', filename='img/success.jpg') }}">
     <h3> {{ groupname }} Successfully connected to the MySQL database.</h3>
   {% else %}
