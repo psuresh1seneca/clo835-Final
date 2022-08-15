@@ -1,6 +1,6 @@
 <!doctype html>
 <title>Hello from Flask</title>
-<body style="background: {{ color }};"> <h2>GroupName: {{ groupname }}</h2> </body>
+<body style="background: {{ color }};"></body>
 <div style="color: #e4e4e4;
     text-align:  center;
     height: 90px;
@@ -8,8 +8,7 @@
 
   {% if db_connect_result %}
     <img src="{{ url_for('static', filename='img/success.jpg') }}">
-    <h3> GROUP7 Successfully connected to the MySQL database.</h3>
-    <h3>IMAGE LOCATION {{ successimg }}</h3>
+    <h3>Group7 Successfully connected to the MySQL database.</h3>
   {% else %}
     <img src="{{ url_for('static', filename='img/failed.png') }}">
     <h3> Failed connecting to the MySQL database. </h3>
