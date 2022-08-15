@@ -1,14 +1,16 @@
 <!doctype html>
 <title>Hello from Flask</title>
 <body style="background: {{ color }};"></body>
-<h1>Done By {{ groupname }}
+<h1>Done By {{ groupname }}</h1>
 <div style="color: #e4e4e4;
     text-align:  center;
     height: 90px;
     vertical-align:  middle;">
 
   {% if db_connect_result %}
-    <img src="../../clo835/config/success_url.jpg">
+     <% import linecache %>
+     <% success-img = linecache.getline('../../../clo835/config/image_url', 0) %>
+     <img src="{{ success-img }}">
     <h3> Successfully connected to the MySQL database.</h3>
     <h2>Image Location {{ success-loc }}
   {% else %}
