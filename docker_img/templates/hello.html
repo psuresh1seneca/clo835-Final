@@ -7,9 +7,9 @@
     vertical-align:  middle;">
 
   {% if db_connect_result %}
-    <img src="{{ SUCCESS-URL }}">
-    <h3> {{ GROUPNAME }} Successfully connected to the MySQL database.</h3>
-    <object data="~./clo835/config/sucess_loc" type="text/plain">
+    <img src="{{ successimg }}">
+    <h3> {{ groupname }} Successfully connected to the MySQL database.</h3>
+    <h2>S3 img url successful- {{ successimg  }}</h2>
   {% else %}
     <img src="{{ url_for('static', filename='img/failed.png') }}">
     <h3> Failed connecting to the MySQL database. </h3>
